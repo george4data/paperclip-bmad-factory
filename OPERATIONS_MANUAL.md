@@ -2,12 +2,34 @@
 
 This document outlines the exact steps to boot up your Paperclip control plane, configure the BMAD Factory, point it to your local codebase, and kick off your AI workforce.
 
+## Prerequisites
+
+Before you begin, you need to clone two repositories: **Paperclip** (the control plane) and **this BMAD Factory** (the agent company configuration).
+
+### 1. Clone Paperclip
+```bash
+git clone https://github.com/paperclipai/paperclip.git /path/to/paperclip
+cd /path/to/paperclip
+pnpm install
+```
+
+### 2. Clone the BMAD Factory
+```bash
+git clone https://github.com/george4data/paperclip-bmad-factory.git /path/to/bmad-factory
+```
+
+### 3. Ensure Node.js and pnpm are installed
+- [Node.js](https://nodejs.org/) (v18+)
+- [pnpm](https://pnpm.io/installation): `npm install -g pnpm`
+
+---
+
 ## Phase 1: Booting the Server
 To use Paperclip, the API and web server must be running.
 
 1. Open a terminal and navigate to the Paperclip repository:
    ```bash
-   cd /Users/georgesp/Dev/paperclip-master
+   cd /path/to/paperclip
    ```
 2. Start the server:
    ```bash
@@ -19,9 +41,9 @@ To use Paperclip, the API and web server must be running.
 Your AI workers need their tools in the actual codebase they will be editing.
 
 1. Open a **second** terminal window.
-2. Navigate to your target project codebase (e.g., QueueHamster):
+2. Navigate to your target project codebase (e.g., `my-project`):
    ```bash
-   cd /Users/georgesp/Dev/QueueHamster
+   cd /path/to/your-project
    ```
 3. Install the BMAD handbook into this specific project:
    ```bash
@@ -32,11 +54,23 @@ Your AI workers need their tools in the actual codebase they will be editing.
 ## Phase 3: Loading the Company into Paperclip
 You only need to do this once, or whenever you modify the instructions in the `bmad-factory` folder.
 
+> **⚠️ Important — Rename your company first!**
+> Before importing, open `COMPANY.md` and update the `name` and `slug` fields to reflect your own company. If you skip this step, it will be loaded into Paperclip as **"BMAD Factory"** instead of your company name.
+>
+> ```yaml
+> ---
+> schema: agentcompanies/v1
+> slug: your-company-name      # ← change this
+> name: Your Company Name      # ← change this
+> domain: Software Engineering
+> ---
+> ```
+
 1. In your second terminal window, run the import command:
    ```bash
-   npx paperclipai company import /Users/georgesp/Dev/bmad-factory
+   npx paperclipai company import /path/to/bmad-factory
    ```
-   *(Note: If you want to rename the company locally, edit `COMPANY.md` before running this).*
+
 
 ## Phase 4: Linking the Codebase and Assigning Work
 Now you orchestrate the work through the web interface.
@@ -44,9 +78,9 @@ Now you orchestrate the work through the web interface.
 1. Open `http://localhost:3100` in your browser.
 2. Select **BMAD Factory** from the company selector.
 3. Navigate to **Repositories** (or Projects) and click **Add Repository**. Provide the local path to your codebase:
-   `/Users/georgesp/Dev/QueueHamster`
+   `/path/to/your-project`
 4. Go to **Issues** and create a new Parent Issue (e.g., *"Design and implement the monetization strategy"*).
-5. Attach this issue to your newly linked QueueHamster repository.
+5. Attach this issue to your newly linked repository.
 6. Assign the issue to the **CEO** or **CTO**.
 
-The agents will wake up inside the `/Users/georgesp/Dev/QueueHamster` folder, use Git, run BMAD skills, and orchestrate the handoffs automatically!
+The agents will wake up inside your project folder, use Git, run BMAD skills, and orchestrate the handoffs automatically!
