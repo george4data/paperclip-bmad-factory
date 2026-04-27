@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to the **BMAD Factory**, a hybrid, automated software engineering organization. BMAD Factory is a "Paperclip company" that leverages the BMAD (Breakthrough Method for Agile AI-Driven Development) methodology to build and maintain software autonomously via specialized AI agents.
+Welcome to the **BMAD Factory**, a hybrid, automated software engineering organization. BMAD Factory is a "[Paperclip](https://github.com/paperclipai/paperclip) company" that leverages the BMAD (Breakthrough Method for Agile AI-Driven Development) methodology to build and maintain software autonomously via specialized AI agents.
 
 ## Intent and Purpose
 
@@ -44,9 +44,9 @@ graph TD
 
 ## How It Works
 
-The workflow is powered by the [Paperclip](https://github.com/paperclip-ai/paperclip) control plane and the BMAD toolkit:
+The workflow is powered by the [Paperclip](https://github.com/paperclipai/paperclip) control plane and the BMAD toolkit:
 
-- Agents orchestrate work via Paperclip issues and assignments.
+- Agents orchestrate work via [Paperclip](https://github.com/paperclipai/paperclip) issues and assignments.
 - Code creation and review utilize `bmad-method` tools directly within the target repository.
 - All agents use the `_bmad-output/` directory structure for seamless artifact handoffs (e.g., the Developer writes code based on specs placed there by the Product Manager).
 
@@ -54,10 +54,10 @@ The workflow is powered by the [Paperclip](https://github.com/paperclip-ai/paper
 
 To run the BMAD Factory:
 
-1. **Start the Control Plane:** Launch the local Paperclip API and web server.
+1. **Start the Control Plane:** Launch the local [Paperclip](https://github.com/paperclipai/paperclip) API and web server.
 2. **Prep Your Target Codebase:** Navigate to your project (e.g., `my-project`) and install the BMAD toolkit (`npx bmad-method install`).
-3. **Import the Company:** Import this `bmad-factory` configuration into Paperclip (`npx paperclipai company import /path/to/bmad-factory`).
-4. **Assign Work:** Through the Paperclip dashboard, link your target repository, create a high-level issue, and assign it to the CEO or CTO.
+3. **Import the Company:** Import this `bmad-factory` configuration into [Paperclip](https://github.com/paperclipai/paperclip) (`npx paperclipai company import /path/to/bmad-factory`).
+4. **Assign Work:** Through the [Paperclip](https://github.com/paperclipai/paperclip) dashboard, link your target repository, create a high-level issue, and assign it to the CEO or CTO.
 
 *For detailed, step-by-step instructions, please see the [Operations Manual](OPERATIONS_MANUAL.md).*
 

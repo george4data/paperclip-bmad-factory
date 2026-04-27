@@ -1,10 +1,10 @@
 # BMAD Factory Operations Manual
 
-This document outlines the exact steps to boot up your Paperclip control plane, configure the BMAD Factory, point it to your local codebase, and kick off your AI workforce.
+This document outlines the exact steps to boot up your [Paperclip](https://github.com/paperclipai/paperclip) control plane, configure the BMAD Factory, point it to your local codebase, and kick off your AI workforce.
 
 ## Prerequisites
 
-Before you begin, you need to clone two repositories: **Paperclip** (the control plane) and **this BMAD Factory** (the agent company configuration).
+Before you begin, you need to clone two repositories: **[Paperclip](https://github.com/paperclipai/paperclip)** (the control plane) and **this BMAD Factory** (the agent company configuration).
 
 ### 1. Clone Paperclip
 ```bash
@@ -25,7 +25,7 @@ git clone https://github.com/george4data/paperclip-bmad-factory.git /path/to/bma
 ---
 
 ## Phase 1: Booting the Server
-To use Paperclip, the API and web server must be running.
+To use [Paperclip](https://github.com/paperclipai/paperclip), the API and web server must be running.
 
 1. Open a terminal and navigate to the Paperclip repository:
    ```bash
@@ -55,7 +55,7 @@ Your AI workers need their tools in the actual codebase they will be editing.
 You only need to do this once, or whenever you modify the instructions in the `bmad-factory` folder.
 
 > **⚠️ Important — Rename your company first!**
-> Before importing, open `COMPANY.md` and update the `name` and `slug` fields to reflect your own company. If you skip this step, it will be loaded into Paperclip as **"BMAD Factory"** instead of your company name.
+> Before importing, open `COMPANY.md` and update the `name` and `slug` fields to reflect your own company. If you skip this step, it will be loaded into [Paperclip](https://github.com/paperclipai/paperclip) as **"BMAD Factory"** instead of your company name.
 >
 > ```yaml
 > ---
@@ -84,3 +84,7 @@ Now you orchestrate the work through the web interface.
 6. Assign the issue to the **CEO** or **CTO**.
 
 The agents will wake up inside your project folder, use Git, run BMAD skills, and orchestrate the handoffs automatically!
+
+---
+
+> Built on top of [Paperclip](https://github.com/paperclipai/paperclip) — the open-source AI agent control plane.
