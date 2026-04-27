@@ -55,7 +55,7 @@ The workflow is powered by the [Paperclip](https://github.com/paperclip-ai/paper
 To run the BMAD Factory:
 
 1. **Start the Control Plane:** Launch the local Paperclip API and web server.
-2. **Prep Your Target Codebase:** Navigate to your project (e.g., `QueueHamster`) and install the BMAD toolkit (`npx bmad-method install`).
+2. **Prep Your Target Codebase:** Navigate to your project (e.g., `my-project`) and install the BMAD toolkit (`npx bmad-method install`).
 3. **Import the Company:** Import this `bmad-factory` configuration into Paperclip (`npx paperclipai company import /path/to/bmad-factory`).
 4. **Assign Work:** Through the Paperclip dashboard, link your target repository, create a high-level issue, and assign it to the CEO or CTO.
 
