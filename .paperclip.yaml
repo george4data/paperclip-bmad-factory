@@ -1,0 +1,20 @@
+schema: paperclip/v1
+agents:
+  ceo:
+    adapter:
+      type: gemini_local
+  cto:
+    adapter:
+      type: claude_local
+  product-manager:
+    adapter:
+      type: claude_local
+  scrum-master:
+    adapter:
+      type: gemini_local
+  lead-developer:
+    adapter:
+      type: claude_local
+  code-reviewer:
+    adapter:
+      type: gemini_local
