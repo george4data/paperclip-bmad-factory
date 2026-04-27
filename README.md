@@ -1,5 +1,7 @@
 # BMAD Factory
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Welcome to the **BMAD Factory**, a hybrid, automated software engineering organization. BMAD Factory is a "Paperclip company" that leverages the BMAD (Breakthrough Method for Agile AI-Driven Development) methodology to build and maintain software autonomously via specialized AI agents.
 
 ## Intent and Purpose
@@ -58,3 +60,7 @@ To run the BMAD Factory:
 4. **Assign Work:** Through the Paperclip dashboard, link your target repository, create a high-level issue, and assign it to the CEO or CTO.
 
 *For detailed, step-by-step instructions, please see the [Operations Manual](OPERATIONS_MANUAL.md).*
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this configuration for your own projects.
