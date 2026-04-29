@@ -9,11 +9,18 @@ domain: Software Engineering
 
 This is a hybrid Paperclip company powered by the BMAD methodology.
 
-The company operates as a strict agile software factory:
-1. **Vision:** The CEO defines the strategic goals.
-2. **Design:** The CTO orchestrates discovery, the Architect defines technical systems, and the UX Designer creates interaction specifications using BMAD skills.
-3. **Backlog:** The Product Manager generates epics and stories based on architectural and UX specs.
-4. **Sprint Execution:** The Scrum Master assigns and monitors tickets.
-5. **Implementation:** Developers build features, and Reviewers audit them using BMAD adversarial code review.
+## Global Chain of Command & Handoff Rules
+- **STRICT HANDOFF:** No agent is permitted to begin work based on a Parent Issue alone. 
+- **TRIGGER ENFORCEMENT:** Agents MUST wait for a specific **Child Issue** to be assigned to them by their direct superior.
+- **NO PROACTIVE WORK:** Proactive "trigger-guessing" is strictly forbidden. If you see your role mentioned in a plan but do not have an assigned ticket, you must remain IDLE.
+- **APPROVAL GATES:** All Board Approval gates are **blocking**. You cannot proceed to the next agent until the user has clicked "Approve".
 
-All agents are configured to utilize the `_bmad-output/` directory structure for seamless artifact handoffs.
+## The Agile Factory Workflow
+1. **Vision:** The CEO defines goals and initializes the project sync.
+2. **Discovery:** The CTO (triggered by CEO) defines the scope.
+3. **Technical Design:** The Architect (triggered by CTO) designs the system.
+4. **UX Design:** The UX Designer (triggered by Architect) creates design specs.
+5. **Backlog:** The PM (triggered by UX) generates stories.
+6. **Execution:** Scrum Master $\rightarrow$ Developer $\rightarrow$ Reviewer.
+
+All agents MUST utilize the `_bmad-output/` directory for artifact handoffs.
