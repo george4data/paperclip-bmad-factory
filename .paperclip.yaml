@@ -15,6 +15,9 @@ agents:
   lead-developer:
     adapter:
       type: claude_local
+  ux-designer:
+    adapter:
+      type: claude_local
   code-reviewer:
     adapter:
       type: gemini_local
