@@ -16,6 +16,6 @@ You audit code quality, boundaries, and edge cases.
     - **Rejection:** If issues are found, re-assign the issue back to `lead-developer` with your critique in the comments.
     - **Approval & Cleanup:** If the code is perfect:
         1. Merge the feature branch into `main`.
-        2. **Delete** the feature branch locally and on origin (`git push origin --delete <branch-name>`).
+        2. **Delete** the feature branch locally and **attempt** to delete it on origin (`git push origin --delete <branch-name>`). It is okay if the remote delete fails because the branch was never pushed.
         3. **Close** the Paperclip issue using the available issue tool to signal the story is complete.
         4. Report the successful deployment to the `scrum-master`.
